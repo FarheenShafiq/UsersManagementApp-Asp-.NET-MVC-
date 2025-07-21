@@ -1,0 +1,15 @@
+CREATE DATABASE UsersManagementApp;
+Use UsersManagementApp;
+
+CREATE TABLE Users (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(100) NOT NULL,
+    Password NVARCHAR(100) NOT NULL,
+    DateOfBirth DATE NOT NULL,
+    Department NVARCHAR(100) NOT NULL,
+    Designation NVARCHAR(100) NOT NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT GETDATE(),
+    UpdatedAt DATETIME NULL
+);
+SELECT * From Users;

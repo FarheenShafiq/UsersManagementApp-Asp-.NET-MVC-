@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="homepage-container">
+    <div class="welcome-box">
+        <h1>Welcome to Users Management App</h1>
+        <p>Manage users efficiently – Register, Login, and View Records.</p>
+        <p>
+            This application allows you to handle user data smoothly with login authentication, profile management, and secure record access. Start by registering as a new user, then log in and explore the system's capabilities.
+        </p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>📝 User Registration</h3>
+                <p>Register with validation checks to ensure accurate user input.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔐 Secure Login</h3>
+                <p>Access your account securely with encrypted credentials.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📂 View Records</h3>
+                <p>Browse all user records with an organized layout.</p>
+            </div>
+            <div class="feature-card">
+                <h3>✏️ Edit Details</h3>
+                <p>Modify user information easily and instantly.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🗑️ Delete Accounts</h3>
+                <p>Remove users when no longer needed, securely and cleanly.</p>
+            </div>
+          
+        </div>
+
+        <div class="home-buttons">
+            <a href="/UsersManagement/Register" class="btn">Register</a>
+            <a href="/UsersManagement/Login" class="btn">Login</a>
+            <a href="/UsersManagement/Records" class="btn">View Records</a>
+        </div>
+    </div>
+</div>

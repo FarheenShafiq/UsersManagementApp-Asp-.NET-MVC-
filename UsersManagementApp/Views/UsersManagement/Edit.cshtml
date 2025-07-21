@@ -1,0 +1,102 @@
+﻿@model UsersManagementApp.Models.UsersModel
+
+@{
+    ViewBag.Title = "Edit User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit User</h2>
+
+<form asp-action="Edit" method="post" class="form" onsubmit="return validateForm()">
+    @Html.HiddenFor(model => model.Id) <!-- Required to know which record to update -->
+
+    <div class="form-group">
+        <label>Name:</label>
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control", id = "Name" })
+        <span id="errorName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Email:</label>
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", id = "Email", type = "email", @readonly = "readonly" })
+        <span id="errorEmail" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Password:</label>
+        @Html.PasswordFor(model => model.Password, new { @class = "form-control", id = "Password" })
+        <span id="errorPassword" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Date of Birth:</label>
+        @Html.TextBoxFor(model => model.DateOfBirth, "{0:yyyy-MM-dd}", new { @type = "date", @class = "form-control", id = "DateOfBirth" })
+        <span id="errorDOB" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Department:</label>
+        @Html.TextBoxFor(model => model.Department, new { @class = "form-control", id = "Department" })
+        <span id="errorDepartment" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Designation:</label>
+        @Html.TextBoxFor(model => model.Designation, new { @class = "form-control", id = "Designation" })
+        <span id="errorDesignation" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Update</button>
+</form>
+
+<script>
+    function validateForm() {
+        let valid = true;
+
+        // Clear previous errors
+        document.querySelectorAll('.text-danger').forEach(e => e.innerText = '');
+
+        // Name
+        let name = document.getElementById("Name").value.trim();
+        if (name === "") {
+            document.getElementById("errorName").innerText = "Name is required.";
+            valid = false;
+        }
+
+        // Password
+        let password = document.getElementById("Password").value.trim();
+        if (password === "") {
+            document.getElementById("errorPassword").innerText = "Password is required.";
+            valid = false;
+        }
+
+        // Date of Birth
+        let dob = document.getElementById("DateOfBirth").value;
+        if (dob === "") {
+            document.getElementById("errorDOB").innerText = "Date of Birth is required.";
+            valid = false;
+        } else {
+            let dobDate = new Date(dob);
+            let today = new Date();
+            let age = today.getFullYear() - dobDate.getFullYear();
+            let m = today.getMonth() - dobDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < dobDate.getDate())) {
+                age--;
+            }
+            if (age < 18) {
+                document.getElementById("errorDOB").innerText = "Must be 18 or older.";
+                valid = false;
+            }
+        }
+
+        // Department
+        let dept = document.getElementById("Department").value.trim();
+        if (dept === "") {
+            document.getElementById("errorDepartment").innerText = "Department is required.";
+            valid = false;
+        }
+
+        // Designation
+        let desg = document.getElementById("Designation").value.trim();
+        if (desg === "") {
+            document.getElementById("errorDesignation").innerText = "Designation is required.";
+            valid = false;
+        }
+
+        return valid;
+    }
+</script>

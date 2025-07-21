@@ -2,7 +2,7 @@ USER MANAGEMENT ASP.NET MVC PROJECT
 ====================================
 Project: UsersManagementApp (ASP.NET MVC + SQL Server)
 Developed By: Farheen Shafiq
-🧑‍💻 TECHNOLOGIES USED:
+TECHNOLOGIES USED:
 --------------------------
 - ASP.NET MVC (.NET Framework)
 - SQL Server (Local DB using SQL Server Authentication)

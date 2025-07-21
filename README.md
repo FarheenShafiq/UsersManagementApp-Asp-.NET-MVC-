@@ -1,4 +1,4 @@
-<img width="975" height="479" alt="image" src="https://github.com/user-attachments/assets/980dbd78-101c-4476-b083-2a89026bd9fb" />USER MANAGEMENT ASP.NET MVC PROJECT
+USER MANAGEMENT ASP.NET MVC PROJECT
 ====================================
 Project: UsersManagementApp (ASP.NET MVC + SQL Server)
 Developed By: Farheen Shafiq
@@ -74,8 +74,7 @@ GO
 
 Save all and press Ctrl + F5 to run the app.
 
-
-
+OUTPUT:
 
   
 

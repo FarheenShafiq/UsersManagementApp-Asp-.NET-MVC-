@@ -1,9 +1,16 @@
 USER MANAGEMENT ASP.NET MVC PROJECT
-====================================
+
 Project: UsersManagementApp (ASP.NET MVC + SQL Server)
 Developed By: Farheen Shafiq
-🧑‍💻 TECHNOLOGIES USED:
---------------------------
+
+<img width="975" height="479" alt="image" src="https://github.com/user-attachments/assets/85e34632-4155-4082-8633-0bc9406951ff" />
+<img width="975" height="420" alt="image" src="https://github.com/user-attachments/assets/c544d2ff-ec80-434c-a7bd-6a83428189e2" />
+<img width="975" height="474" alt="image" src="https://github.com/user-attachments/assets/cfaffcd1-8b57-44f9-bf15-e5883105c309" />
+<img width="975" height="470" alt="image" src="https://github.com/user-attachments/assets/c928c7b2-3329-488d-a5cc-a4c58e7604ca" />
+
+
+ TECHNOLOGIES USED:
+
 - ASP.NET MVC (.NET Framework)
 - SQL Server (Local DB using SQL Server Authentication)
 - Entity Framework (Code First + Manual Table Creation)
@@ -33,21 +40,27 @@ Views/
 Views/Shared/
 ├── _Layout.cshtml      (Common layout)
 wwwroot/
-├── site.css           
+├── site.css
 
-🗄 DATABASE DETAILS:
+DATABASE DETAILS:
+
 -------------------------
 Database Name: UsersManagementApp  
-Server Name: DESKTOP-8BL3MIG\SQLEXPRESS  
-Authentication: SQL Server Authentication  
+
+Server Name: DESKTOP-8BL3MIG\SQLEXPRESS 
+
+Authentication: SQL Server Authentication 
+
 Username: User  
-Password: SQL@server  
+
+Password: SQL@server 
+
 📄 SQL SCRIPT TO CREATE DATABASE:
------------------------------------
+
 Paste and run table from DatabaseInfo.txt in SQL Server Management Studio:
 
 ✅ HOW TO RUN THE PROJECT:
------------------------------
+
 1. Open Visual Studio.
 2. Go to File > Open > Project/Solution.
 3. Select the `.sln` file of this project.
@@ -59,7 +72,6 @@ Paste and run table from DatabaseInfo.txt in SQL Server Management Studio:
 
 Save all and press Ctrl + F5 to run the app.
 
-OUTPUT:
 
   
 

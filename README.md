@@ -2,7 +2,7 @@ USER MANAGEMENT ASP.NET MVC PROJECT
 ====================================
 Project: UsersManagementApp (ASP.NET MVC + SQL Server)
 Developed By: Farheen Shafiq
-TECHNOLOGIES USED:
+🧑‍💻 TECHNOLOGIES USED:
 --------------------------
 - ASP.NET MVC (.NET Framework)
 - SQL Server (Local DB using SQL Server Authentication)
@@ -44,23 +44,8 @@ Username: User
 Password: SQL@server  
 📄 SQL SCRIPT TO CREATE DATABASE:
 -----------------------------------
-Paste and run this in SQL Server Management Studio:
-CREATE DATABASE UsersManagementApp;
-GO
-USE UsersManagementApp;
-GO
-CREATE TABLE Users (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(100) NOT NULL,
-    Email NVARCHAR(100) NOT NULL,
-    Password NVARCHAR(100) NOT NULL,
-    DateOfBirth DATE NOT NULL,
-    Department NVARCHAR(100) NOT NULL,
-    Designation NVARCHAR(100) NOT NULL,
-    CreatedAt DATETIME NOT NULL DEFAULT GETDATE(),
-    UpdatedAt DATETIME NULL
-);
-GO
+Paste and run table from DatabaseInfo.txt in SQL Server Management Studio:
+
 ✅ HOW TO RUN THE PROJECT:
 -----------------------------
 1. Open Visual Studio.
